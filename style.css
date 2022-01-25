@@ -547,9 +547,24 @@ img {
     .logo {
         margin-left: 0px;
     }
+
+    .wrapper {
+        margin-left: 0px;
+    }
+
+    .input-search {
+        width: 250px;
+        opacity: 1;
+        text-align: left;
+        font: normal normal 300 24px/29px Roboto;
+        letter-spacing: 0px;
+        color: #3A3A3A;
+    }
+
     .shopping-cart {
         margin-left: 0px;
     }
+
     .registration-link {
         margin-left: 0px;
     }
@@ -562,7 +577,7 @@ img {
         margin-left: 0px;
     }
 
-   
+
 
     .main-section {
         display: grid;
@@ -600,12 +615,11 @@ img {
     }
 
     .special-products>.first-product {
-
         grid-column-start: 1;
         grid-column-end: 1;
     }
 
-   
+
 
     .inforamtion {
         margin-left: 0px;
@@ -619,8 +633,7 @@ img {
         width: 100%;
         justify-content: center;
         justify-items: center;
-        align-items: center;
-
+        align-items: center; 
     }
 
     .subscribe-input {
@@ -635,7 +648,6 @@ img {
 
     .send-email {
         margin-top: 0px;
-
     }
 
     .promotions-container {
@@ -647,11 +659,12 @@ img {
     .footer {
         grid-template-columns: 1fr;
         margin-left: 0px;
-        
-        
     }
 
-    .footer > .inforamtion, .footer > .menu, .footer > .social-networks, .footer > .contacts {
+    .footer>.inforamtion,
+    .footer>.menu,
+    .footer>.social-networks,
+    .footer>.contacts {
         margin-left: 50px;
     }
 
