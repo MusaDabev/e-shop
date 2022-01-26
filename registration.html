@@ -5,46 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="butn-style.css">
 </head>
 <body>
     
-    <div class="footer">
-        <div class="inforamtion">
-          <h3>ИНФОРМАЦИЯ</h3>
-          <ul class="sidebar-items">
-            <li><a href="">За нас</a></li>
-            <li><a href="">Контакти</a></li>
-            <li><a href="">Магазини</a></li>
-            <li><a href="">Общи условия</a></li>
-            <li><a href="">Поверителност и лични данни</a></li>
-            <li><a href="">Мнения</a></li>
-          </ul>
-        </div>
-        <div class="menu">
-          <h3>МЕНЮ</h3>
-          <ul class="menu-footer">
-            <li><a href="">Нови продукти</a></li>
-            <li><a href="">Промоции</a></li>
-            <li><a href="">Категория 1</a></li>
-            <li><a href="">Категория 2</a></li>
-          </ul>
-        </div>
-        <div class="social-networks">
-          <h3>СОЦИАЛНИ МРЕЖИ</h3>
-          <i class="fab fa-facebook"></i>
-          <i class="fab fa-twitter-square"></i>
-          <i class="fab fa-instagram"></i>
-        </div>
-        <div class="contacts">
-          <h3>КОНТАКТИ</h3>
-          <p>Tel: +359 87 777 8888</p>
-          <p>E-mail: example@ex.com</p>
-          <p>Адрес: ул. Цар Борис 3</p>
-          <p>
-            Copyright © 2021
-            <img class="footer-logo" src="/pictures/Drop_White.png" alt="" />
-          </p>
-        </div>
-      </div>
+  <button id="like-button"></button>
+
+  <script>
+    document.querySelector('.like-button').addEventListener('click', (e) => {
+  e.currentTarget.classList.toggle('liked');
+});
+  </script>
 </body>
 </html>
