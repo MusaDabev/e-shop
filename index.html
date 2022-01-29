@@ -400,15 +400,14 @@
 
       function save() {
         localStorage.setItem("item", true);
-
-        
-        let favbtn = document.getElementById('favorite-btn');
+        let favbtn = document.getElementById('like-button');
         favbtn.innerHTML = "Любим";
-        // favbtn.style.backgroundColor = "blue";
+         favbtn.style.backgroundColor = "blue";
+         console.log("Favorite button was clicked")
       }
 
       window.onload = function() {
-        let favorite = document.getElementById('favorite-btn');
+        let favorite = document.getElementById('like-button');
         if(window.localStorage) {
           let storage = window.localStorage;
           if(storage.getItem('item') == 'true') {
