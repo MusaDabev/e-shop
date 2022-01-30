@@ -189,7 +189,7 @@
     margin-left: 140px;
 }
 
-.most-selled-item>img {
+.most-selled-item>img, .most-selled-item> a> img {
     width: 260px;
     height: 252px;
 
