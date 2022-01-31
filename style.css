@@ -14,7 +14,8 @@
 
     width: 120px;
     height: 58px;
-    margin-left: 100px;
+    margin-left: 50px;
+   
 
 }
 
@@ -713,7 +714,8 @@ img {
 
 
 .menu-btn {
-    position: relative;
+    /* position: relative; */
+    margin-left: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -725,6 +727,7 @@ img {
 }
 
 .menu-btn-burger {
+    
     width: 50px;
     height: 6px;
     background-color: black;
