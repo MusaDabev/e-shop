@@ -8,15 +8,12 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="script" href="script.js" />
     <link rel="stylesheet" href="fontawsome_css/all.min.css" />
-    
   </head>
   <body>
     <div class="header">
       <div class="menu-btn">
-        <div class="menu-btn-burger">
-
-        </div>
-    </div>
+        <div class="menu-btn-burger"></div>
+      </div>
       <a href="index.html">
         <img class="logo" src="/pictures/Drop.png" alt="logo"
       /></a>
@@ -44,7 +41,7 @@
       <div class="login-btn">
         <button>Вход</button>
       </div>
-    </div>
+    </div>  <!--   END HEADER -->
 
     <div class="main-section">
       <div class="side-bar">
@@ -104,7 +101,9 @@
 
     <div class="most-selled-container">
       <div class="most-selled-item">
-       <a href="/product1.html"> <img src="/pictures/products/0_1356070.jpg" alt="" /></a> 
+        <a href="/product1.html">
+          <img src="/pictures/products/0_1356070.jpg" alt=""
+        /></a>
         <p class="product-name">Име на продукт</p>
         <p class="product-discription">Кратко описание на продукта</p>
         <div class="product-prices-and-discount">
@@ -405,36 +404,35 @@
 
       function save() {
         localStorage.setItem("item", true);
-        let favbtn = document.getElementById('like-button');
+        let favbtn = document.getElementById("like-button");
         favbtn.innerHTML = "Любим";
-         favbtn.style.backgroundColor = "blue";
-         console.log("Favorite button was clicked")
-      }
+        favbtn.style.backgroundColor = "blue";
+        console.log("Favorite button was clicked");
+      } // end save function
 
-      window.onload = function() {
-        let favorite = document.getElementById('like-button');
-        if(window.localStorage) {
+      window.onload = function () {
+        let favorite = document.getElementById("like-button");
+        if (window.localStorage) {
           let storage = window.localStorage;
-          if(storage.getItem('item') == 'true') {
+          if (storage.getItem("item") == "true") {
             favorite.innerHTML = "Любим";
           }
         }
-        favorite.style.backgroundColor = 'red';
-        favorite.style.color = 'white';
-      }
+        favorite.style.backgroundColor = "red";
+        favorite.style.color = "white";
+      };
 
-
-      const menuBtn = document.querySelector('.menu-btn')
-let menuOpen = false;
-menuBtn.addEventListener('click', () => {
-  if (!menuOpen) {
-    menuBtn.classList.add('open');
-    menuOpen = true;
-  } else {
-    menuBtn.classList.remove('open');
-    menuOpen = false;
-  }
-}); // end event listener
+      const menuBtn = document.querySelector(".menu-btn");
+      let menuOpen = false;
+      menuBtn.addEventListener("click", () => {
+        if (!menuOpen) {
+          menuBtn.classList.add("open");
+          menuOpen = true;
+        } else {
+          menuBtn.classList.remove("open");
+          menuOpen = false;
+        }
+      }); // end event listener
     </script>
   </body>
 </html>

@@ -707,12 +707,7 @@ img {
 }
 
 
-
-
-
-
-
-
+/*  HAMBURGER MENU BUTTON */
 .menu-btn {
     /* position: relative; */
     margin-left: 70px;
@@ -723,7 +718,6 @@ img {
     height: 80px;
     cursor: pointer;
     transition: all .5s ease-in-out;
-    border: 3px solid black;
 }
 
 .menu-btn-burger {
