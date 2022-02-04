@@ -702,6 +702,7 @@ img {
     .footer>.social-networks,
     .footer>.contacts {
         margin-left: 50px;
+        font-size: 32px;
     }
 
 }
