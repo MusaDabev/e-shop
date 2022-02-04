@@ -564,8 +564,8 @@ img {
 
 /* Slideshow styling end*/
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+/* Extra small devices (phones, 576px and down) */
+@media only screen and (max-width: 576px) {
     .header {
         display: flex;
         flex-direction: column;
@@ -704,6 +704,69 @@ img {
         margin-left: 50px;
         font-size: 32px;
     }
+
+}
+
+/* TABLETS DESIGN */
+@media only screen and (min-width: 576px) {
+
+
+    .most-selled-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+       
+    
+        margin-left: 0px;
+        width: auto;
+        justify-items: center;
+    }
+
+    .promotions-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    
+        margin-left: 0px;
+        width: auto;
+        justify-items: center;
+    
+    }
+
+    .subscribe {
+        display: grid;
+        grid-template-columns:1fr;
+        grid-gap: 20px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 200px;
+        background: transparent linear-gradient(263deg, #7B21F1 0%, #B027F5 82%, #2721F1 100%) 0% 0% no-repeat padding-box;
+        ;
+        height: auto;
+        box-shadow: 0px 3px 6px #00000029;
+        border-radius: 29px;
+        opacity: 1;
+        justify-items: center;
+    }
+
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        background-color: #5752EE;
+        margin-top: 140px;
+    }
+    .footer>.inforamtion {
+        margin-left: 0px;
+    }
+
+    .footer>.inforamtion,
+    .footer>.menu,
+    .footer>.social-networks,
+    .footer>.contacts {
+        justify-items: space-around;
+        margin-left: 10px;
+        font-size: 32px;
+        width: auto;
+    }
+
 
 }
 
