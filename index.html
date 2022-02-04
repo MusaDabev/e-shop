@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="script" href="script.js" />
     <link rel="stylesheet" href="fontawsome_css/all.min.css" />
+    <script src="store.js" async></script>
   </head>
   <body>
     <div class="header">
@@ -102,14 +103,15 @@
     <div class="most-selled-container">
       <div class="most-selled-item">
         <a href="/product1.html">
-          <img src="/pictures/products/0_1356070.jpg" alt=""
+          <img class="shop-item-image" src="/pictures/products/0_1356070.jpg" alt=""
         /></a>
-        <p class="product-name">Име на продукт</p>
+        <p class="shop-item-title">Име на продукт</p>
         <p class="product-discription">Кратко описание на продукта</p>
         <div class="product-prices-and-discount">
-          <strong>65,50</strong>
+          <strong class="shop-item-price">65,50</strong>
           <p style="text-decoration: line-through">25,50</p>
           <button onclick="save()" id="like-button">Добави към любими!</button>
+          <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
         </div>
       </div>
 
