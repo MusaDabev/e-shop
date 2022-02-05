@@ -23,8 +23,6 @@
 .wrapper {
     display: flex;
     margin-left: 200px;
-
-
 }
 
 .search-box {
@@ -32,8 +30,6 @@
     position: relative;
     padding: 15px;
     display: flex;
-
-
 }
 
 .search-btn {
@@ -46,7 +42,6 @@
     cursor: pointer;
     background-color: white;
     border: none;
-
 }
 
 .input-search {
@@ -58,7 +53,6 @@
     font: normal normal 300 24px/29px Roboto;
     letter-spacing: 0px;
     color: #3A3A3A;
-
 }
 
 .shopping-cart {
@@ -84,7 +78,6 @@
 .shopping-cart-logo {
     height: 45px;
     width: 45px;
-
 }
 
 .shopping-cart>p {
@@ -134,8 +127,9 @@
     border-radius: 7px;
     opacity: 1;
     font-size: 20px;
-
 }
+
+/* END HEADER DESIGN */
 
 /* MAIN SECTION STYLES */
 
@@ -154,7 +148,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .side-options>img {
@@ -183,7 +176,6 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr 1fr;
-
     margin-left: 140px;
 }
 
@@ -321,7 +313,6 @@
 
 .send-email {
     margin-top: 40px;
-
 }
 
 .subscribe-input {
@@ -364,13 +355,11 @@
     color: white;
     font: normal normal 300 32px/38px Roboto;
     margin-left: 140px;
-
 }
 
 .inforamtion>ul>li>a {
     text-decoration: none;
     color: white;
-
 }
 
 .inforamtion>ul>li {
@@ -400,7 +389,6 @@
 
 .menu-footer {
     list-style-type: none;
-
 }
 
 .menu-footer>li>a {
@@ -409,9 +397,7 @@
 }
 
 .menu-footer>li {
-
     padding: 8px;
-
     margin-left: -40px;
 }
 
@@ -557,10 +543,6 @@ img {
 
 
 
-
-
-
-
 /* Slideshow styling end*/
 
 /* Extra small devices (phones, 576px and down) */
@@ -568,20 +550,9 @@ img {
     .header {
         display: flex;
         flex-direction: column;
-        height: 310px;
-        justify-items: center;
+        height: auto;
         align-items: center;
-        background: #FFFFFF 0% 0% no-repeat padding-box;
         box-shadow: 0px 3px 6px #00000029;
-        opacity: 1;
-    }
-
-    .logo {
-        margin-left: 0px;
-    }
-
-    .wrapper {
-        margin-left: 0px;
     }
 
     .input-search {
@@ -593,28 +564,26 @@ img {
         color: #3A3A3A;
     }
 
-    .shopping-cart {
+    .shopping-cart,
+    .registration-link,
+    .login-btn,
+    .shopping-cart>a,
+    .wrapper,
+    .logo {
         margin-left: 0px;
     }
-
-    .registration-link {
-        margin-left: 0px;
-    }
-
-    .login-btn {
-        margin-left: 0px;
-    }
-
-    .shopping-cart>a {
-        margin-left: 0px;
-    }
-
 
     .main-section {
         display: grid;
         grid-template-columns: 1fr;
         margin-left: 0px;
         justify-items: center;
+    }
+
+    .side-bar>h1 {
+        text-align: center;
+        font-size: 50px;
+        width: auto;
     }
 
     .most-selled-heading {
@@ -709,7 +678,6 @@ img {
 /* TABLETS DESIGN */
 @media only screen and (min-width: 576px) {
 
-
     .header {
         display: flex;
         flex-direction: column;
@@ -743,6 +711,12 @@ img {
     .registration-link {
         margin-bottom: 15px;
     }
+
+    .main-section {
+        grid-template-columns: 1fr;
+        margin: 0px;
+    }
+
 
     .most-selled-container {
         display: grid;
