@@ -1464,7 +1464,7 @@ img {
     
     .wrapper {
         display: flex;
-        margin-left: 200px;
+        margin-left: 0px;
     }
     
     .search-box {
@@ -1489,7 +1489,7 @@ img {
     .input-search {
         border: none;
         border-bottom: solid #000000;
-        width: 490px;
+        width: 300px;
         height: 45px;
         text-align: left;
         font: normal normal 300 24px/29px Roboto;
@@ -1505,7 +1505,7 @@ img {
         text-decoration: none;
         color: black;
         margin-top: 10px;
-        margin-left: 100px;
+        margin-left: 20px;
         display: flex;
         align-items: center;
         width: 93px;
@@ -1528,7 +1528,7 @@ img {
     
     .registration-link {
         text-decoration: none;
-        margin-left: 100px;
+        margin-left: 10px;
         cursor: pointer;
         margin-top: 22px;
         height: 30px;
@@ -2042,6 +2042,19 @@ img {
 
 @media screen and (min-width: 1201px) {
 
+    .shopping-cart>a {
+        text-decoration: none;
+        color: black;
+        margin-top: 10px;
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+        width: 50px;
+        height: 29px;
+        text-align: left;
+        font-size: 0px;
+    }
+
     .most-selled-container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -2063,6 +2076,21 @@ img {
 }
 
 @media screen and (min-width: 1500px) {
+
+    .shopping-cart>a {
+        text-decoration: none;
+        color: black;
+        margin-top: 10px;
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+        width: 93px;
+        height: 29px;
+        text-align: left;
+        font: normal normal 300 24px/29px Roboto;
+        letter-spacing: 0px;
+        color: #252525;
+    }
 
     .most-selled-container {
         display: grid;
