@@ -27,56 +27,27 @@ function showSlides(n) {
   }
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
-}
+}  // end slideshow script
+
+
 
 function save() {
-  localStorage.setItem("item", true);
+  sessionStorage.setItem("item", true);
   let favbtn = document.getElementById("like-button");
-  favbtn.innerHTML = "Любим";
-  favbtn.style.backgroundColor = "blue";
+  favbtn.innerHTML = "<img class=\"red-heart-img\"src=\"./icons/video_image-Bz5ouo4Jn.jpg\" alt=\"heart\">";
+  favbtn.style.backgroundColor = "white";
   console.log("Favorite button was clicked");
 } // end save function
 
 window.onload = function () {
   let favorite = document.getElementById("like-button");
-  if (window.localStorage) {
-    let storage = window.localStorage;
+  if (window.sessionStorage) {
+    let storage = window.sessionStorage;
     if (storage.getItem("item") == "true") {
-      favorite.innerHTML = "Любим";
+      favorite.innerHTML = "<img class=\"red-heart-img\" src=\"./icons/Heart-SG2001-transparent.png\" alt=\"\">";
     }
   }
-  favorite.style.backgroundColor = "red";
-  favorite.style.color = "white";
-};   //End slideshow script
-
-function save() {
-  localStorage.setItem("item", true);
-  let favbtn = document.getElementById("like-button");
-  favbtn.innerHTML = "Любим";
-  favbtn.style.backgroundColor = "blue";
-  console.log("Favorite button was clicked");
-} // end save function
-
-window.onload = function () {
-  let favorite = document.getElementById("like-button");
-  if (window.localStorage) {
-    let storage = window.localStorage;
-    if (storage.getItem("item") == "true") {
-      favorite.innerHTML = "Любим";
-    }
-  }
-  favorite.style.backgroundColor = "red";
-  favorite.style.color = "white";
+  favorite.style.backgroundColor = "white";
 };
 
-const menuBtn = document.querySelector(".menu-btn");
-let menuOpen = false;
-menuBtn.addEventListener("click", () => {
-  if (!menuOpen) {
-    menuBtn.classList.add("open");
-    menuOpen = true;
-  } else {
-    menuBtn.classList.remove("open");
-    menuOpen = false;
-  }
-}); // end event listener
+
