@@ -130,7 +130,9 @@
 .main-section {
     display: grid;
     grid-template-columns: .5fr 1fr;
-    margin-left: 140px;
+    margin-left: 50px;
+    margin-right: 50px;
+    justify-content: center;
 }
 
 .side-bar>h1 {
@@ -207,8 +209,8 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 400px 400px;
     grid-gap: 25px;
-    margin-left: 140px;
-    margin-right: 140px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .special-products>div>img {
@@ -1650,8 +1652,8 @@ img {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 400px 400px;
         grid-gap: 25px;
-        margin-left: 140px;
-        margin-right: 140px;
+        margin-left: 50px;
+        margin-right: 50px;
     }
     
     
