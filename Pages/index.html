@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>e-Shop</title>
-    <link rel="stylesheet" href="./Styles/style.css" />
-    <link rel="stylesheet" href="fontawsome_css/all.min.css" />
+    <link rel="stylesheet" href="../Styles/style.css" />
+    <link rel="stylesheet" href="../fontawsome_css/all.min.css" />
   </head>
   <body>
     <div class="header">
@@ -112,7 +112,18 @@
         <div class="product-prices-and-discount">
           <strong class="shop-item-price">65,50</strong>
           <p style="text-decoration: line-through">25,50</p>
-          <div class = "fav-no" onclick="save()" id="like-button" style="width: 30px" > <img class="red-heart-img" src="./icons/Heart-SG2001-transparent.png" alt=""></div>
+          <div
+            class="fav-no"
+            onclick="save()"
+            id="like-button"
+            style="width: 30px"
+          >
+            <img
+              class="red-heart-img"
+              src="./icons/Heart-SG2001-transparent.png"
+              alt=""
+            />
+          </div>
         </div>
       </div>
 
@@ -328,8 +339,18 @@
     <div class="subscribe">
       <img class="subscribe-logo" src="/pictures/Drop_White.png" alt="" />
       <p>Абонирайте се за нашите специални оферти</p>
-      <form class="send-email" action="https://formsubmit.co/eminem_3@abv.bg" method="POST">
-        <input type="text" class="subscribe-input" placeholder="Твоят E-mail" />
+      <form
+        class="send-email"
+        action="https://formsubmit.co/eminem_3@abv.bg"
+        method="POST"
+      >
+
+        <input type="email" name="email" class="subscribe-input" placeholder="Твоят E-mail" />
+        <input
+          type="hidden"
+          name="_next"
+          value="http://127.0.0.1:5501/Pages/thankYouForSub.html"
+        />
         <button class="subs-btn"><i class="far fa-envelope"></i></button>
       </form>
     </div>
@@ -372,6 +393,6 @@
         </p>
       </div>
     </div>
-    <script src="./Scripts/script.js"></script>
+    <script src="../Scripts/script.js"></script>
   </body>
 </html>
