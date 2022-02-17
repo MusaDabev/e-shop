@@ -32,7 +32,7 @@ function showSlides(n) {
 function save() {
   let favbtn = document.getElementById("like-button");
   if(favbtn.classList.contains("fav")) {
-    favbtn.innerHTML = '<img class="red-heart-img" src="./icons/Heart-SG2001-transparent.png" alt="">'
+    favbtn.innerHTML = '<img class="red-heart-img" src="../icons/Heart-SG2001-transparent.png" alt="">'
     favbtn.classList.remove("fav");
     favbtn.classList.add("fav-no");
     sessionStorage.removeItem("item", true);
@@ -40,7 +40,7 @@ function save() {
     sessionStorage.setItem("item", true);
   
     favbtn.innerHTML =
-      '<img class="red-heart-img"src="../icons/video_image-Bz5ouo4Jn.jpg" alt="heart">';
+      '<img class="red-heart-img" src="../icons/video_image-Bz5ouo4Jn.jpg" alt="heart">';
     favbtn.style.backgroundColor = "white";
     favbtn.classList.add("fav");
     favbtn.classList.remove("fav-no");
@@ -60,5 +60,36 @@ window.onload = function () {
   }
   favorite.style.backgroundColor = "white";
 };
+
+
+const container = document.querySelector('.most-selled-container');
+
+const renderPosts = async() => {
+  let uri = 'http://localhost:3000/products';
+
+  const res = await fetch(uri);
+  const products = await res.json();
+  
+
+  let templet = '';
+
+  products.forEach(product => {
+    templet += `<div class="most-selled-item">
+    <img src=${product.image_src} alt="" />
+    <p class="product-name">${product.name}</p>
+    <p class="product-discription">${product.description}</p>
+    <div class="product-prices-and-discount">
+      <strong>65,50</strong>
+      <img src="/pictures/heart-regular.svg" alt="" />
+    </div>
+    <a href="./product.html">Read more...</a>
+  </div>`
+  })
+  container.innerHTML = templet;
+}
+
+
+
+window.addEventListener('DOMContentLoaded', () => renderPosts())
 
 

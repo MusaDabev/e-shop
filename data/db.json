@@ -1,0 +1,102 @@
+{
+"products": [
+    {
+        "id": 1,
+        "name": "Рокля",
+        "description": "Кафява стилна рокля",
+        "image_src": "/pictures/products/0_1356070.jpg",
+        "price": 65.00
+    },
+    {
+        "id": 2,
+        "name": "Рокля",
+        "description": "Кафява стилна рокля",
+        "image_src": "/pictures/products/0_1356060.jpg",
+        "price": 60.00
+    },
+    {
+        "id": 3,
+        "name": "Риза",
+        "description": "Описание",
+        "image_src": "/pictures/products/0_1356060.jpg",
+        "price": 60.00
+    },
+    {
+        "id": 4,
+        "name": "Суичър",
+        "description": "Суичър с надпис",
+        "image_src": "/pictures/products/0_1355407.jpg",
+        "price": 29.99
+    },
+    {
+        "id": 5,
+        "name": "Обувки",
+        "description": "Описание",
+        "image_src": "/pictures/products/0_1355485.jpg",
+        "price": 25.99
+    },
+    {
+        "id": 6,
+        "name": "Обувки",
+        "description": "Описание",
+        "image_src": "/pictures/products/0_1355538_1355833.jpg",
+        "price": 25.99
+    },
+    {
+        "id": 7,
+        "name": "Рокля",
+        "description": "Описание",
+        "image_src": "/pictures/products/0_1355584.jpg",
+        "price": 62.99
+    },
+    {
+        "id": 8,
+        "name": "Панталон",
+        "description": "Описание",
+        "image_src": "/pictures/products/0_1355600.jpg",
+        "price": 25.99
+    },
+    {
+        "id": 9,
+        "name": "Име на продукт",
+        "description": "Описание",
+        "image_src": "/pictures/products/0_1355603.jpg",
+        "price": 25.99
+    },
+    {
+        "id": 10,
+        "name": "Име на продукт",
+        "description": "Описание",
+        "image_src": "/pictures/products/0_1355603.jpg",
+        "price": 25.99
+    },
+    {
+        "id": 11,
+        "name": "Име на продукт",
+        "description": "Описание",
+        "image_src": "/pictures/products/0_1355603.jpg",
+        "price": 25.99
+    },
+    {
+        "id": 12,
+        "name": "Име на продукт",
+        "description": "Описание",
+        "image_src": "/pictures/products/0_1355603.jpg",
+        "price": 25.99
+    }
+
+],
+
+"discountProducts": [
+    {
+        "id": 1,
+        "name": "Рокля",
+        "description": "Кафява стилна рокля",
+        "image_src": "/pictures/products/0_1356070.jpg",
+        "price": 65.00,
+        "discountPrice": 45.00
+    }
+]
+
+
+}
