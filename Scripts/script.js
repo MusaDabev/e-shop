@@ -64,7 +64,7 @@ window.onload = function () {
 
 const container = document.querySelector('.most-selled-container');
 
-const renderPosts = async() => {
+const renderProducts = async() => {
   let uri = 'http://localhost:3000/products';
 
   const res = await fetch(uri);
@@ -79,10 +79,10 @@ const renderPosts = async() => {
     <p class="product-name">${product.name}</p>
     <p class="product-discription">${product.description}</p>
     <div class="product-prices-and-discount">
-      <strong>65,50</strong>
+      <strong>${product.price}</strong>
       <img src="/pictures/heart-regular.svg" alt="" />
     </div>
-    <a href="./product.html">Read more...</a>
+    <a href="./product.html?id=${product.id}">Read more...</a>
   </div>`
   })
   container.innerHTML = templet;
@@ -90,6 +90,6 @@ const renderPosts = async() => {
 
 
 
-window.addEventListener('DOMContentLoaded', () => renderPosts())
+window.addEventListener('DOMContentLoaded', () => renderProducts())
 
 
