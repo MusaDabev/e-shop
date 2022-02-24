@@ -1,5 +1,5 @@
 <?php
-    $con = mysqli_connect('localhost', 'root', '',’e-mailfromsubscribe’);
+    $con = mysqli_connect('localhost/3000', 'root', '',’e-mailfromsubscribe’);
 
     $txtEmail = $_POST['email'];
 

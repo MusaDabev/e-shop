@@ -31,21 +31,21 @@ function showSlides(n) {
 
 function save() {
   let favbtn = document.getElementById("like-button");
-  if(favbtn.classList.contains("fav")) {
-    favbtn.innerHTML = '<img class="red-heart-img" src="../icons/Heart-SG2001-transparent.png" alt="">'
+  if (favbtn.classList.contains("fav")) {
+    favbtn.innerHTML =
+      '<img class="red-heart-img" src="../icons/Heart-SG2001-transparent.png" alt="">';
     favbtn.classList.remove("fav");
     favbtn.classList.add("fav-no");
     sessionStorage.removeItem("item", true);
-  } else  {
+  } else {
     sessionStorage.setItem("item", true);
-  
+
     favbtn.innerHTML =
       '<img class="red-heart-img" src="../icons/video_image-Bz5ouo4Jn.jpg" alt="heart">';
     favbtn.style.backgroundColor = "white";
     favbtn.classList.add("fav");
     favbtn.classList.remove("fav-no");
-  } 
-
+  }
 } // end save function
 
 window.onload = function () {
@@ -61,35 +61,60 @@ window.onload = function () {
   favorite.style.backgroundColor = "white";
 };
 
+const container = document.querySelector(".most-selled-container");
 
-const container = document.querySelector('.most-selled-container');
-
-const renderProducts = async() => {
-  let uri = 'http://localhost:3000/products';
+const renderProducts = async () => {
+  let uri = "http://localhost:3000/products"; // if I want to sort by price "?_sort=price"
 
   const res = await fetch(uri);
   const products = await res.json();
-  
 
-  let templet = '';
+  let templet = "";
 
-  products.forEach(product => {
+  products.forEach((product) => {
     templet += `<div class="most-selled-item">
-    <img src=${product.image_src} alt="" />
+    <a href="./product.html?id=${product.id}"><img src=${product.image_src} alt="" /></a>
+    
     <p class="product-name">${product.name}</p>
     <p class="product-discription">${product.description}</p>
     <div class="product-prices-and-discount">
       <strong>${product.price}</strong>
       <img src="/pictures/heart-regular.svg" alt="" />
     </div>
-    <a href="./product.html?id=${product.id}">Read more...</a>
-  </div>`
-  })
+    
+  </div>`;
+  });
   container.innerHTML = templet;
-}
+};
 
+window.addEventListener("DOMContentLoaded", () => renderProducts());
 
+// ===========================================================================
 
-window.addEventListener('DOMContentLoaded', () => renderProducts())
+const promotionsContainer = document.querySelector(".promotions-container");
 
+const renderPromotionProducts = async () => {
+  let uri = "http://localhost:3000/discountProducts"; // if I want to sort by price "?_sort=price"
 
+  const res = await fetch(uri);
+  const discountProduct = await res.json();
+
+  let templet = "";
+
+  discountProduct.forEach((product) => {
+    templet += `<div class="most-selled-item">
+      <a href="./product.html?id=${product.id}disc"><img src=${product.image_src} alt="" /></a>
+      <p class="product-name">${product.name}</p>
+      <p class="product-discription">${product.description}</p>
+      <div class="product-prices-and-discount">
+      <strong>${product.price}</strong>
+      <p>${product.discountPrice}</p>
+      <img src="/pictures/heart-regular.svg" alt="" />
+    </div>
+    
+  </div>`;
+  });
+  promotionsContainer.innerHTML = templet;
+};
+
+window.addEventListener("DOMContentLoaded", () => renderPromotionProducts());

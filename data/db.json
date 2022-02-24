@@ -90,9 +90,49 @@
 "discountProducts": [
     {
         "id": 1,
-        "name": "Рокля",
-        "description": "Кафява стилна рокля",
-        "image_src": "/pictures/products/0_1356070.jpg",
+        "name": "Риза",
+        "description": "Описание",
+        "image_src": "/pictures/products/CS_ClassicWhite_06_2048x2048.jpg",
+        "price": 38.00,
+        "discountPrice": 27.00
+    },
+    {
+        "id": 2,
+        "name": "Дънки",
+        "description": "Описание",
+        "image_src": "/pictures/products/81KyIuYaH6L._UY550_.jpg",
+        "price": 65.00,
+        "discountPrice": 45.00
+    },
+    {
+        "id": 3,
+        "name": "Пола",
+        "description": "Описание",
+        "image_src": "/pictures/products/867a31f0-1921-433a-84aa-466f16955dca.jpg",
+        "price": 65.00,
+        "discountPrice": 45.00
+    },
+    {
+        "id": 4,
+        "name": "Тениска",
+        "description": "Описание",
+        "image_src": "/pictures/products/9088.png",
+        "price": 65.00,
+        "discountPrice": 45.00
+    },
+    {
+        "id": 5,
+        "name": "Яке",
+        "description": "Описание",
+        "image_src": "/pictures/products/hmgoepprod.jpg",
+        "price": 65.00,
+        "discountPrice": 45.00
+    },
+    {
+        "id": 6,
+        "name": "Риза",
+        "description": "Описание",
+        "image_src": "/pictures/products/types-of-shirts-for-men-bewakoof-blog-10-1610963791.jpg",
         "price": 65.00,
         "discountPrice": 45.00
     }
