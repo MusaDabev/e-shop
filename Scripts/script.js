@@ -117,4 +117,15 @@ const renderPromotionProducts = async () => {
   promotionsContainer.innerHTML = templet;
 };
 
+
+// Burger button
+
+const burger = document.querySelector('.burger');
+const burgerNav = document.querySelector('.burger-nav');
+
+burger.addEventListener('click', () => {
+  burger.classList.toggle('open');
+  burgerNav.classList.toggle('open');
+})
+
 window.addEventListener("DOMContentLoaded", () => renderPromotionProducts());

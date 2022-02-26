@@ -4,15 +4,74 @@
     justify-content: space-around;
     top: 0px;
     left: 0px;
-    height: 80px;
+    height: 100px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
+}
+
+.burger {
+    display: relative;
+    font-size: 1.2 rem;
+    cursor: pointer;
+    z-index: 1;
+    
+}
+
+.burger span {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #000000;
+    margin-bottom: 6.5px;
+}
+
+.burger-nav {
+    background-color: #B027F5;
+    padding: 20px;
+    padding-top: 80px;
+    height: 100%;
+    box-sizing: border-box;
+    width: 200px;
+    position: absolute;
+    top: 0px;
+    z-index: 0;
+    left: -200px;
+}
+
+.burger-nav a {
+    color: white;
+    display: block;
+    margin-bottom: 6px;
+    font-size: 1.5rem;
+}
+
+.burger-nav.open {
+    left: 0px;
+}
+.burger.open span:nth-child(1) {
+    transform: rotate(45deg) translateY(13px);
+}
+.burger.open span:nth-child(2) {
+   opacity: 0;
+   width: 0;
+}
+.burger.open span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-13px);
+}
+
+.burger-nav {
+    transition: left ease-in 0.3s;
+}
+
+.burger > span {
+    transition: all ease-in 0.3s;
 }
 
 .logo {
     width: 120px;
     height: 58px;
     margin-left: 50px;
+    
 }
 
 /* Search Bar */
@@ -183,6 +242,10 @@
 .most-selled-item>a>img {
     width: 260px;
     height: 252px;
+}
+.most-selled-item>img,
+.most-selled-item>a>img:hover {  
+    transform: scale(1.2);
 }
 
 
