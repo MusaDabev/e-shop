@@ -1,3 +1,13 @@
+
+/* Variables */ 
+
+/* Fonts */
+
+/* Base styles */
+
+body {
+    font-size: 16px;
+}
 .header {
     display: flex;
     flex-direction: row;
@@ -5,7 +15,6 @@
     top: 0px;
     left: 0px;
     height: 100px;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
 }
 
@@ -14,7 +23,6 @@
     font-size: 1.2 rem;
     cursor: pointer;
     z-index: 1;
-
 }
 
 .burger span {
@@ -74,7 +82,6 @@
     width: 120px;
     height: 58px;
     margin-left: 50px;
-
 }
 
 .shopping-cart-slide {
@@ -82,8 +89,12 @@
     height: 100%;
     background-color: #7B21F1;
     position: absolute;
-    right: 0;
+    right: -400px;
     z-index: 1;
+}
+
+.shopping-cart-slide.active {
+   right: 0;
 }
 
 /* HEADER -> SHOOPING BAG */

@@ -28,7 +28,7 @@
         </div>
       </div>
       <div class="shopping-cart">
-        <a href="cart.html">
+        <a href="cart.html" id="shopping-bag">
           <p>Количка</p>
           <img
             class="shopping-cart-logo"
@@ -67,7 +67,7 @@
    <!-- Shopping cart -->
 
 
-   <div class="shopping-cart-slide">
+   <div class="shopping-cart-slide" id="shopping-cart-slide">
     
     
       <div class="cart-header">
@@ -271,5 +271,17 @@
       </div>
     </div>
     <script src="../Scripts/script.js"></script>
+    <script>
+      // Open and close shopping cart
+
+const shoppingBagBtn = document.getElementById('shopping-bag');
+const shoppingBag = document.getElementById('shopping-cart-slide');
+
+shoppingBagBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  console.log('vell');
+  shoppingBag.classList.toggle('active');
+})
+    </script>
   </body>
 </html>
