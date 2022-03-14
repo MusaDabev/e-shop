@@ -29,3 +29,4 @@ const renderDetails = async () => {
 };
 
 window.addEventListener("DOMContentLoaded", () => renderDetails());
+

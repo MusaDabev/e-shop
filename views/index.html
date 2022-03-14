@@ -15,9 +15,7 @@
         <span></span>
         <span></span>
       </div>
-      <a href="index.html">
-        <img class="logo" src="/pictures/Drop.png" alt="logo"
-      /></a>
+      <a href="/"> <img class="logo" src="/pictures/Drop.png" alt="logo" /></a>
       <div class="wrapper">
         <div class="search-box">
           <input type="text" class="input-search" placeholder="Търсене" />
@@ -35,23 +33,17 @@
             src="/pictures/shopping-cart-solid.svg"
             alt="shopping cart"
           />
+          <div class="total-items-in-cart">0</div>
         </a>
       </div>
 
-      <a class="registration-link" href="registration.html">Регистрация</a>
+      <a class="registration-link" href="/register">Регистрация</a>
       <div class="login-btn">
-        <button>Вход</button>
+       <a href="/login"><button>Вход</button></a>
+        
       </div>
-      <div class="shopping-bag">
-        <a href="./cart.html">
-            <img src="../icons/bag.png" alt="cart">
-            Cart
-            <div class="total-items-in-cart">
-                0
-            </div>
-        </a>
     </div>
-    </div>   <!--   END HEADER -->
+    <!--   END HEADER -->
 
     <!-- Slide out nav!! -->
     <nav class="burger-nav">
@@ -62,36 +54,25 @@
         <li><a href="#">Контакти</a></li>
         <li><a href="#">За нас</a></li>
       </ul>
-   </nav>     <!-- End slide out nav -->
+    </nav>
+    <!-- End slide out nav -->
 
-   <!-- Shopping cart -->
+    <!-- Shopping cart -->
 
-
-   <div class="shopping-cart-slide" id="shopping-cart-slide">
-    
-    
+    <div class="shopping-cart-slide" id="shopping-cart-slide">
       <div class="cart-header">
-          <div class="column1">Item</div>
-          <div class="column2">Unit price</div>
-          <div class="column3">Units</div>
+        <div class="column1">Item</div>
+        <div class="column2">Unit price</div>
+        <div class="column3">Units</div>
       </div>
       <div class="cart-items">
-          <!-- render cart items here -->
-          
+        <!-- render cart items here -->
       </div>
       <div class="cart-footer">
-          <div class="subtotal">
-              Subtotal (0 items): $0
-          </div>
-          <div class="checkout">
-              Proceed to checkout
-          </div>
+        <div class="subtotal">Subtotal (0 items): $0</div>
+        <div class="checkout">Proceed to checkout</div>
       </div>
-
-   </div>
-
-
-    
+    </div>
 
     <div class="main-section">
       <div class="side-bar">
@@ -274,14 +255,14 @@
     <script>
       // Open and close shopping cart
 
-const shoppingBagBtn = document.getElementById('shopping-bag');
-const shoppingBag = document.getElementById('shopping-cart-slide');
+      const shoppingBagBtn = document.getElementById("shopping-bag");
+      const shoppingBag = document.getElementById("shopping-cart-slide");
+      const className = "active";
 
-shoppingBagBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  console.log('vell');
-  shoppingBag.classList.toggle('active');
-})
+      shoppingBagBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        shoppingBag.classList.toggle("active");
+      });
     </script>
   </body>
 </html>

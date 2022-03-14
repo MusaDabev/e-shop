@@ -58,7 +58,7 @@ window.onload = function () {
         '<img class="red-heart-img"src="../icons/video_image-Bz5ouo4Jn.jpg" alt="heart">';
     }
   }
-  favorite.style.backgroundColor = "white";
+ 
 };
 
 const container = document.querySelector(".most-selled-container");
