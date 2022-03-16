@@ -2,7 +2,7 @@
   "name": "e-shop",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -26,6 +26,8 @@
     "express-session": "^1.17.2",
     "lodash": "^4.17.21",
     "method-override": "^3.0.0",
+    "mongoose": "^6.2.7",
+    "mssql": "^8.0.2",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
     "passport": "^0.5.2",

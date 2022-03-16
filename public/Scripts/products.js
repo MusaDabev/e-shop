@@ -1,6 +1,7 @@
 const productID = new URLSearchParams(window.location.search).get("id");
 const prodContainer = document.querySelector(".product-container");
 
+
 const renderDetails = async () => {
   const res = await fetch("http://localhost:3000/products/" + productID);
   const post = await res.json();

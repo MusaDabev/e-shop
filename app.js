@@ -4,11 +4,12 @@ if (process.env.NODE_ENV !== 'production') {
 
 const express = require('express');
 const bcrypt = require('bcrypt');
-const passport = require('passport')
-const initializePassport = require('./passport-config')
-const flash = require('express-flash')
-const session = require('express-session')
-const methodOverride = require('method-override')
+const passport = require('passport');
+const initializePassport = require('./passport-config');
+const flash = require('express-flash');
+const session = require('express-session');
+const methodOverride = require('method-override');
+const Products = require('./models/products');
 
 initializePassport(passport, email =>  users.find(user => user.email === email),
    id =>   users.find(user => user.id === id)
@@ -29,8 +30,9 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(methodOverride('_method'))
+
 // listen for requests 
-app.listen(7000);
+app.listen(process.env.PORT);
 
 
 
@@ -44,6 +46,22 @@ app.get('/login', (req, res) => {
 
 app.get('/register', (req, res) => {
     res.render('register.ejs')
+})
+
+app.get('/addprod', (req, res) => {
+    let product = new Products({
+        name: 'Рокля',
+        description: 'Кафява стилна рокля',
+        image_src: '/pictures/products/0_1356070.jpg',
+        price: 65
+    })
+    product.save()
+    .then((result) => {
+        res.send(result)
+    })
+    .catch((err) => {
+        console.log(err);
+    })
 })
 
 // add checkAuthenticated for authentication check !!!
@@ -110,67 +128,9 @@ function checkNotAuthenticated (req, res, next) {
 }
 
 
-
-
-// const mysql = require('mysql');
 const { name } = require('ejs');
 const { Passport } = require('passport/lib');
 const res = require('express/lib/response');
-
-// create connection 
-
-// const db = mysql.createConnection({
-//   host: "localhost",
-//   user: "root",
-//   password: "",
-//   database: 'products'
-// }
-// )
-
-// connect to mysql
-// db.connect((err) => {
-//   if (err) {
-//     throw err
-//   }
-//   console.log('MySQL connected');
-// })
-
-
-// create database
-// app.get('/createdb', (req, res) => {
-//   let sql = 'CREATE DATABASE products'
-//   db.query(sql, err => {
-//     if (err) {
-//       throw err
-//     }
-//     res.send('database created')
-//   })
-// })
-
-//create table 
-// app.get('/createproduct', (req, res) => {
-//     let sql = 'CREATE TABLE products(id int AUTO_INCREMENT, name VARCHAR (255), description VARCHAR(255), image_src VARCHAR (255), price int, PRIMARY KEY(id))'
-//     db.query(sql, err => {
-//         if (err) {
-//             throw err
-//         }
-//         res.send('table created')
-// })
-// })
-
-// insert into table
-// app.post('/', (req, res) =>{
-//     let product = req.body;
-
-//    db.query('INSERT INTO products SET ?', product, (err) => {
-//        if (err) {
-//            throw err
-//        }
-//        res.send('inserted')
-//    })
-// })
-
-
 
 //404 page
 app.use((req, res) => {
