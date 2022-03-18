@@ -131,6 +131,26 @@
     <p class="most-selled-heading">Най - продавани</p>
 
     <div class="most-selled-container">
+      <% if (product.length > 0) { %>
+        <% product.forEach(product => { %>
+      <div class="most-selled-item">
+        <a href="./product.html?id=<%= product.id%>"><img src=<%= product.image_src %> alt="" /></a>
+        
+        <p class="product-name"><%= product.name %></p>
+        <p class="product-discription"><%= product.description %></p>
+        <div class="product-prices-and-discount">
+          <strong><%= product.price %></strong>
+          <img src="/pictures/heart-regular.svg" alt="" />
+          <!-- <button onClick="addToCart(<%= product.id %>)"> Add to cart </button> -->
+        </div>
+       
+        
+      </div>
+      <% }) %>
+
+      <% } %>
+      
+
       <!-- INJECT THE PRODUCTS HERE! -->
 
       <!-- <div class="most-selled-item">

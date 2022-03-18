@@ -10,6 +10,7 @@ const flash = require('express-flash');
 const session = require('express-session');
 const methodOverride = require('method-override');
 const Products = require('./models/products');
+const path = require('path')
 
 initializePassport(passport, email =>  users.find(user => user.email === email),
    id =>   users.find(user => user.id === id)
@@ -20,7 +21,8 @@ const app = express();
 // save user info (later in database)!
 const users = []
 
-app.set('view-engine', 'ejs')
+
+app.set('view engine', 'ejs')
 app.use(flash())
 app.use(session({
     secret: process.env.SESSION_SECRET,
@@ -31,8 +33,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(methodOverride('_method'))
 
-// listen for requests 
-app.listen(process.env.PORT);
+
 
 
 
@@ -48,13 +49,8 @@ app.get('/register', (req, res) => {
     res.render('register.ejs')
 })
 
-app.get('/addprod', (req, res) => {
-    let product = new Products({
-        name: 'Рокля',
-        description: 'Кафява стилна рокля',
-        image_src: '/pictures/products/0_1356070.jpg',
-        price: 65
-    })
+app.post('/addprod', (req, res) => {
+    let product = new Products(req.body)
     product.save()
     .then((result) => {
         res.send(result)
@@ -64,11 +60,26 @@ app.get('/addprod', (req, res) => {
     })
 })
 
+app.get('/', (req, res) => {
+    const product = [{
+        name: 'Mario',
+        description: 'helo'
+    
+    }]
+    
+    Products.find()
+    .then((result) => {
+        res.render('index', {title: 'Products', product: result} )
+    })
+    .catch((err) => {
+        console.log(err);
+    })
+})
+
 // add checkAuthenticated for authentication check !!!
 
-app.get('/', (req, res) => {
-    res.sendFile('./views/index.html', { root: __dirname})
-})
+// Routs
+
 
 app.get('/cart', (req, res) => {
     res.sendFile('./views/cart.html', { root: __dirname})
@@ -136,5 +147,8 @@ const res = require('express/lib/response');
 app.use((req, res) => {
     res.status(404).sendFile('./views/404.html', { root: __dirname})
 })
+
+// listen for requests 
+app.listen(process.env.PORT);
 
 
