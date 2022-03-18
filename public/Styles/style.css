@@ -81,7 +81,7 @@ body {
     margin-left: 50px;
 }
 
-.shopping-cart-slide {
+/* .shopping-cart-slide {
     width: 0px;
     height: 100%;
     background-color: #7B21F1;
@@ -93,10 +93,10 @@ body {
 .shopping-cart-slide.active {
    right: 0;
    width: 400px;
-}
+} */
 
 /* HEADER -> SHOOPING BAG */
-.shopping-bag {
+/* .shopping-bag {
     padding: 10px 5px;
 }
 
@@ -115,14 +115,14 @@ body {
     padding: 5px;
     background-color: rgb(242, 255, 58);
     border-radius: 5px;
-}
+} */
 
 /* CART */
-.cart {
+/* .cart {
     height: 100%;
     width: 25%;
     position: relative;
-}
+} */
 
 /* cart header */
 .cart-header {
