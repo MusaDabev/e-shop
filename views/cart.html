@@ -4,19 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>E-SHOP | CART</title>
     <link rel="stylesheet" href="../Styles/style.css" />
     <link rel="stylesheet" href="../fontawsome_css/all.min.css" />
     <link rel="stylesheet" href="../Styles/cart.css">
 
-    
   </head>
   <body>
     <div class="header">
       <div class="menu-btn">
         <div class="menu-btn-burger"></div>
       </div>
-      <a href="index.html">
+      <a href="/">
         <img class="logo" src="/pictures/Drop.png" alt="logo"
       /></a>
       <div class="wrapper">
@@ -29,13 +28,14 @@
         </div>
       </div>
       <div class="shopping-cart">
-        <a href="cart.html">
+        <a href="/cart" id="shopping-bag">
           <p>Количка</p>
           <img
             class="shopping-cart-logo"
             src="/pictures/shopping-cart-solid.svg"
             alt="shopping cart"
           />
+          <div class="total-items-in-cart">0</div>
         </a>
       </div>
 
@@ -50,16 +50,16 @@
 
      <div class="shopping-cart-slide" id="shopping-cart-slide">
       <div class="cart-header">
-        <div class="column1">Item</div>
-        <div class="column2">Unit price</div>
-        <div class="column3">Units</div>
+        <div class="column1">Продукт:</div>
+        <div class="column2">Цена за продукт:</div>
+        <div class="column3">Брой:</div>
       </div>
       <div class="cart-items">
         <!-- render cart items here -->
       </div>
       <div class="cart-footer">
-        <div class="subtotal">Subtotal (0 items): $0</div>
-        <div class="checkout">Proceed to checkout</div>
+        <div class="subtotal">Общо (0 продукта): $0</div>
+        <div class="checkout">Напред към плащане</div>
       </div>
     </div>
 
@@ -119,7 +119,7 @@
         </p>
       </div>
     </div>
-
-    <script src="../Scripts/script.js"></script>
+      
+    <script src="../Scripts/cart.js"></script>
   </body>
 </html>

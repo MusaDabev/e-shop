@@ -264,6 +264,7 @@ function renderCartItems () {
   })
 }
 
+renderCartItems ();
 
 // remove item from cart
 function removeItemFromCart (id) {
@@ -293,6 +294,8 @@ return {
 
 updateCart();
 }
+
+
 
 
 

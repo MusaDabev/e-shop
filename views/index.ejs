@@ -26,7 +26,7 @@
         </div>
       </div>
       <div class="shopping-cart">
-        <a href="cart.html" id="shopping-bag">
+        <a href="/cart" id="shopping-bag">
           <p>Количка</p>
           <img
             class="shopping-cart-logo"
@@ -57,22 +57,7 @@
     </nav>
     <!-- End slide out nav -->
 
-    <!-- Shopping cart -->
 
-    <div class="shopping-cart-slide" id="shopping-cart-slide">
-      <div class="cart-header">
-        <div class="column1">Item</div>
-        <div class="column2">Unit price</div>
-        <div class="column3">Units</div>
-      </div>
-      <div class="cart-items">
-        <!-- render cart items here -->
-      </div>
-      <div class="cart-footer">
-        <div class="subtotal">Subtotal (0 items): $0</div>
-        <div class="checkout">Proceed to checkout</div>
-      </div>
-    </div>
 
     <div class="main-section">
       <div class="side-bar">
@@ -233,6 +218,24 @@
       </form>
     </div>
 
+        <!-- Shopping cart -->
+
+    
+        <div class="shopping-cart-slide" id="shopping-cart-slide">
+          <div class="cart-header">
+            <div class="column1">Продукт:</div>
+            <div class="column2">Цена за продукт:</div>
+            <div class="column3">Брой:</div>
+          </div>
+          <div class="cart-items">
+            <!-- render cart items here -->
+          </div>
+          <div class="cart-footer">
+            <div class="subtotal">Общо (0 продукта): $0</div>
+            <div class="checkout">Напред към плащане</div>
+          </div>
+        </div>
+
     <div class="footer">
       <div class="inforamtion">
         <h3>ИНФОРМАЦИЯ</h3>
@@ -272,17 +275,5 @@
       </div>
     </div>
     <script src="../Scripts/script.js"></script>
-    <script>
-      // Open and close shopping cart
-
-      const shoppingBagBtn = document.getElementById("shopping-bag");
-      const shoppingBag = document.getElementById("shopping-cart-slide");
-      const className = "active";
-
-      shoppingBagBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        shoppingBag.classList.toggle("active");
-      });
-    </script>
   </body>
 </html>

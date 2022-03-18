@@ -80,7 +80,6 @@ app.get('/', (req, res) => {
 
 // Routs
 
-
 app.get('/cart', (req, res) => {
     res.sendFile('./views/cart.html', { root: __dirname})
 })
